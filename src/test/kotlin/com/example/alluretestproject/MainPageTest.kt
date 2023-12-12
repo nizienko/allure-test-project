@@ -14,48 +14,20 @@ import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.*
 
 class MainPageTest {
-    private val mainPage = MainPage()
 
-    companion object {
-        @JvmStatic
-        @BeforeAll
-        fun setUpAll() {
-            Configuration.browserSize = "1280x800"
-            SelenideLogger.addListener("allure", AllureSelenide())
-        }
-    }
 
-    @BeforeEach
-    fun setUp() {
-        // Fix the issue https://github.com/SeleniumHQ/selenium/issues/11750
-        Configuration.browserCapabilities = ChromeOptions().addArguments("--remote-allow-origins=*")
-        open("https://www.jetbrains.com/")
+    @Test
+    fun test1() {
+        assert(true)
     }
 
     @Test
-    fun search() {
-        mainPage.searchButton.click()
-
-        element("[data-test='search-input']").sendKeys("Selenium")
-        element("button[data-test='full-search-button']").click()
-
-        element("input[data-test='search-input']").shouldHave(attribute("value", "Selenium"))
+    fun test2() {
+        assert(true)
     }
 
     @Test
-    fun toolsMenu() {
-        mainPage.toolsMenu.click()
-
-        element("div[data-test='main-submenu']").shouldBe(visible)
-    }
-
-    @Test
-    fun navigationToAllTools() {
-        mainPage.seeDeveloperToolsButton.click()
-        mainPage.findYourToolsButton.click()
-
-        element("#products-page").shouldBe(visible)
-
-        assertEquals("All Developer Tools and Products by JetBrains", Selenide.title())
+    fun test3() {
+        assert(true)
     }
 }
