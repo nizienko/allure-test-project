@@ -16,8 +16,8 @@ ext {
     junitVersion = '5.10.0'
 }
 
-sourceCompatibility = '17'
-targetCompatibility = '17'
+sourceCompatibility = '11'
+targetCompatibility = '11'
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
@@ -25,7 +25,7 @@ tasks.withType(JavaCompile) {
 
 [compileKotlin, compileTestKotlin].forEach {
     it.kotlinOptions {
-        jvmTarget = '17'
+        jvmTarget = '11'
     }
 }
 
