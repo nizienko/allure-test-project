@@ -40,13 +40,15 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
-}
-allure {
-    autoconfigure = true
-    version = "${allureVersion}"
-
-    useJUnit5 {
-        version = "${allureVersion}"
+    useJUnitPlatform {
+//        includeTags()
     }
 }
+//allure {
+//    autoconfigure = true
+//    version = "${allureVersion}"
+//
+//    useJUnit5 {
+//        version = "${allureVersion}"
+//    }
+//}

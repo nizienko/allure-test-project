@@ -1,33 +1,26 @@
 package com.example.alluretestproject
 
-import com.codeborne.selenide.Condition.attribute
-import com.codeborne.selenide.Condition.visible
-import com.codeborne.selenide.Configuration
-import com.codeborne.selenide.Selectors.*
-import com.codeborne.selenide.Selenide
-import com.codeborne.selenide.Selenide.element
-import com.codeborne.selenide.Selenide.open
-import org.openqa.selenium.chrome.ChromeOptions
-import com.codeborne.selenide.logevents.SelenideLogger
-import io.qameta.allure.selenide.AllureSelenide
-import org.junit.jupiter.api.Assertions.*
+import io.qameta.allure.AllureId
 import org.junit.jupiter.api.*
 
 class MainPageTest {
 
 
-    @Test
-    fun test1() {
-        assert(true)
+    @AllureId("10357")
+    @TestFactory
+    fun test1(): List<DynamicTest> {
+        return listOf(DynamicTest.dynamicTest("test 1"){ assert(true) })
     }
 
-    @Test
-    fun test2() {
-        assert(true)
+    @AllureId("10356")
+    @TestFactory
+    fun test2(): List<DynamicTest> {
+        return listOf(DynamicTest.dynamicTest("test 2"){ assert(true) })
     }
 
-    @Test
-    fun test3() {
-        assert(true)
+    @AllureId("10358")
+    @TestFactory
+    fun test3(): List<DynamicTest> {
+        return listOf(DynamicTest.dynamicTest("test 3"){ assert(true) })
     }
 }
