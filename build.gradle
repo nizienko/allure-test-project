@@ -44,11 +44,11 @@ test {
 //        includeTags()
     }
 }
-//allure {
-//    autoconfigure = true
-//    version = "${allureVersion}"
-//
-//    useJUnit5 {
-//        version = "${allureVersion}"
-//    }
-//}
+allure {
+    autoconfigure = true
+    version = "${allureVersion}"
+
+    useJUnit5 {
+        version = "${allureVersion}"
+    }
+}
