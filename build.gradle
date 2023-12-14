@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.8.21'
-//    id 'io.qameta.allure' version '2.9.3'
+    id 'io.qameta.allure' version '2.9.3'
 }
 
 group 'com.example'
@@ -44,11 +44,11 @@ test {
 //        includeTags()
     }
 }
-//allure {
-//    autoconfigure = true
-//    version = "${allureVersion}"
-//
-//    useJUnit5 {
-//        version = "${allureVersion}"
-//    }
-//}
+allure {
+    autoconfigure = true
+    version = "${allureVersion}"
+
+    useJUnit5 {
+        version = "${allureVersion}"
+    }
+}
