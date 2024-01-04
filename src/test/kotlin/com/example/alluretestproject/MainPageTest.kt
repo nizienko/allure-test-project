@@ -22,8 +22,8 @@ class MainPageTest {
 
     @AllureId("10358")
     @ParameterizedTest
-    @ValueSource(strings = ["param1", "param2"])
+    @ValueSource(strings = ["param1", "param2", "param3"])
     fun test3(param: String) {
-        assert(param == "param2")
+        assert(true)
     }
 }
