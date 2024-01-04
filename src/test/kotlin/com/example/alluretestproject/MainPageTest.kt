@@ -2,6 +2,8 @@ package com.example.alluretestproject
 
 import io.qameta.allure.AllureId
 import org.junit.jupiter.api.*
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.ValueSource
 
 class MainPageTest {
 
@@ -19,8 +21,9 @@ class MainPageTest {
     }
 
     @AllureId("10358")
-    @TestFactory
-    fun test3(): List<DynamicTest> {
-        return listOf(DynamicTest.dynamicTest("test 3"){ assert(true) })
+    @ParameterizedTest
+    @ValueSource(strings = ["param1", "param2"])
+    fun test3(param: String) {
+        assert(param == "param2")
     }
 }
